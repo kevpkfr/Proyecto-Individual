@@ -5,18 +5,18 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController _passwordController = TextEditingController();
 
   void _register(BuildContext context) {
-    // Aquí se puede implementar la lógica de registro sin Firebase
-    // Ejemplo: Validar los datos de registro y realizar el registro
-
-    // Simulando un registro exitoso
+    // Validar los datos de registro
     if (_emailController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
-      // Implementa la lógica para registrar al usuario
+      // Mostrar mensaje de registro exitoso
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Registro exitoso")),
       );
+      // Navegar a la pantalla de productos después de un registro exitoso
+      Navigator.pushNamed(context, '/products');
     } else {
+      // Mostrar mensaje de error si los campos están vacíos
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Failed to register")),
+        SnackBar(content: Text("Completa todos los campos")),
       );
     }
   }

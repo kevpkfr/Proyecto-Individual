@@ -5,15 +5,18 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _passwordController = TextEditingController();
 
   void _login(BuildContext context) {
-    // Aquí se puede implementar la lógica de autenticación sin Firebase
-    // Ejemplo: Validar credenciales de usuario
-
-    // Simulando un inicio de sesión exitoso
-    if (_emailController.text == 'user@example.com' && _passwordController.text == 'password') {
+    // Validar las credenciales de usuario
+    if (_emailController.text == 'kevin@gmail.com' && _passwordController.text == '1234') {
+      // Mostrar mensaje de ingreso exitoso
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("¡Ingreso exitoso!")),
+      );
+      // Navegar a la pantalla de productos si las credenciales son correctas
       Navigator.pushNamed(context, '/products');
     } else {
+      // Mostrar mensaje de error si las credenciales son incorrectas
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Failed to sign in")),
+        SnackBar(content: Text("Credenciales incorrectas")),
       );
     }
   }
@@ -41,6 +44,21 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => _login(context),
               child: Text('Ingresar'),
+            ),
+            SizedBox(height: 10), // Espacio entre el botón y el texto
+            Text(
+              'Bienvenido las credenciales son: kevin@gmail.com ', // Texto de bienvenida
+              style: TextStyle(
+                
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+             Text(
+              'Bienvenido la contraseña es:1234 ', // Texto de bienvenida
+              style: TextStyle(
+                
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),

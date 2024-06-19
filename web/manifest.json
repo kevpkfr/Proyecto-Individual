@@ -1,6 +1,6 @@
 {
-    "name": "mi_app_pantallas",
-    "short_name": "mi_app_pantallas",
+    "name": "tienda_online",
+    "short_name": "tienda_online",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

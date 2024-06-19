@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 10), // Espacio entre el botón y el texto
             Text(
-              'Bienvenido las credenciales son: kevin@gmail.com ', // Texto de bienvenida
+              'Bienvenido las credenciales son: kevin@gmail.com ', 
               style: TextStyle(
                 
                 fontWeight: FontWeight.bold,
